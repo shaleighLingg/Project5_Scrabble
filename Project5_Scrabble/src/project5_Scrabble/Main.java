@@ -1,10 +1,12 @@
 package project5_Scrabble;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Main {
-	public static void main(String[] args) {
 
+	public static void main(String[] args) {
+		
+		ScrabbleGame game = new ScrabbleGame();
+		
+		game.playLoop();
 	}
+
 }
