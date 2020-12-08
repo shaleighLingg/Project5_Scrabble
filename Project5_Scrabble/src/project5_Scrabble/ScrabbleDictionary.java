@@ -3,11 +3,17 @@ package project5_Scrabble;
 import java.io.File;
 import java.util.Scanner;
 
-public class ScrabbleDictionary {
-	public ScrabbleDictionary() { 	// gets scrabble dictionary that will compare
-									// players words with valid words
-		
-		// https://scrabble.hasbro.com/en-us/tools#dictionary
-	}
+/**
+ * Grabs scrabble dictionary for player word comparisons, compares words
+ * @author LINGGSB19
+ *
+ */
 
+public class ScrabbleDictionary {
+
+	boolean isWord = true; 
+	
+	public void checkWord() {
+		
+	}
 }

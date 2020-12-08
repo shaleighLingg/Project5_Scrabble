@@ -1,4 +1,6 @@
-// import java.io.IOException;
+package project5_Scrabble;
+
+
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -17,7 +19,7 @@ public class Board {
              }
        }
 
-       public void printBoard() {// GUI board will be implemented
+       public void printBoard() {
 
              for (int row = 0; row < size; row++) {
                    System.out.println();
@@ -36,8 +38,8 @@ public class Board {
        }
        
        public void play(char currentPlayer, int location) throws Exception { //Ensures player is entering the number 1-9 and ensures the space they are trying
-   		//Implement and throw exception if invalid                       //to play has not been already played
-   		if (location < 1 || location > 9) {
+   		//Implement and throw exception if invalid                       	 //to play has not been already played
+   		if (location < 1 || location > 15) {
    			throw new IllegalArgumentException("Move must be between 1 and 15.");
    		} else if (spaceFilled(getRow(location), getColumn(location))) {
    			throw new IOException("Space has been filled. Choose a new space.");

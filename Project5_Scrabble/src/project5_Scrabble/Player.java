@@ -1,32 +1,29 @@
 package project5_Scrabble;
 
-public abstract class Player {
+public class Player {
 
-	public Player() { // player information
-		// each player needs their own ArrayList
+	private int score;
+	private char[] letters;
+	private String name;
+	
+	//Creates a player and stores data for name, score, and letters to play
+	public Player(String name, ScrabbleLetter fillChar) { 
+		this.score = 0;
+		this.name = name;
+		this.letters = new char[7];
+		for(int i=0; i<7; i++) {
+		this.letters[i] = fillChar.getLetter();
+		}
 	}
-
-	public int numPlayers() { // # of players
-		return 0;
+	
+	public String getPlayerName() {
+		return this.name;
 	}
-
-	public void addPlayer(String newPlayer) { // allows player to be added
-
+	public int getPlayerScore() {
+		return this.score;
 	}
-
-	abstract void setPlayerPoints(int playerPoints); // keeps points earned each round
-	// going to need to store in an ArrayList
-
-	abstract int playerPieces(int playerPieces); // letters player can use
-
-	@Override
-	public int hashCode() {
-		return super.hashCode();
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		return super.equals(obj);
+	public char[] getPlayersLetterChoices() {
+		return this.letters;
 	}
 
 }

@@ -1,3 +1,5 @@
+package project5_Scrabble;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -60,38 +62,39 @@ public class PlayerMoves extends Player {
 				}
 			}
 			// Ensures that player changes every time the loop iterates
-			int numPlayers = 4;
+//			int numPlayers = 4;
+			
 			// if there are 4 players
-			while (numPlayers == 4) {
-				if (currentPlayer == '1') {
-					currentPlayer = '2';
-				} else if (currentPlayer == '2') {
-					currentPlayer = '3';
-				} else if (currentPlayer == '3') {
-					currentPlayer = '4';
-				} else {
-					currentPlayer = '1';
-				}
-			}
+//			while (numPlayers == 4) {
+//				if (currentPlayer == '1') {
+//					currentPlayer = '2';
+//				} else if (currentPlayer == '2') {
+//					currentPlayer = '3';
+//				} else if (currentPlayer == '3') {
+//					currentPlayer = '4';
+//				} else {
+//					currentPlayer = '1';
+//				}
+//			}
 			// if there are 3 players
-			while (numPlayers == 3) {
-				if (currentPlayer == '1') {
-					currentPlayer = '2';
-				} else if (currentPlayer == '2') {
-					currentPlayer = '3';
-				} else {
-					currentPlayer = '1';
-				}
-			}
+//			while (numPlayers == 3) {
+//				if (currentPlayer == '1') {
+//					currentPlayer = '2';
+//				} else if (currentPlayer == '2') {
+//					currentPlayer = '3';
+//				} else {
+//					currentPlayer = '1';
+//				}
+//			}
 			// if there are 2 players
-			while (numPlayers == 2) {
-				if (currentPlayer == '1') {
-					currentPlayer = '2';
-				} else {
-					currentPlayer = '1';
-				}
-			}
-		}
+//			while (numPlayers == 2) {
+//				if (currentPlayer == '1') {
+//					currentPlayer = '2';
+//				} else {
+//					currentPlayer = '1';
+//				}
+//			}
+//		}
 
 	}
 
@@ -261,16 +264,6 @@ public class PlayerMoves extends Player {
 		return true;
 	}
 
-	// I don't think this is needed 
-//	@Override
-//	public int hashCode() {
-//		int result = 17;
-//		result = 37 * result + Double.valueOf(lat).hashCode();
-//		result = 37 * result + Double.valueOf(lon).hashCode();
-//		return result;
-//		return hashCode();
-//	}
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj) {
@@ -282,6 +275,12 @@ public class PlayerMoves extends Player {
 
 		PlayerMoves other = (PlayerMoves) obj;
 		return (playerMoves == other.playerMoves);
+	}
+
+	@Override
+	int playerPieces(int playerPieces) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
