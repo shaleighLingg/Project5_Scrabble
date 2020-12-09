@@ -1,26 +1,31 @@
 package project5_Scrabble;
-import java.util.Random;
-import java.util.ArrayList;
-public class LetterBag {
-	/**
-	 * 
-	 * @author LINGGSB19
-	 *
-	 */
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+/**
+ * This Class contains the letters choices used to play scrabble,
+ * the worth of each letter, and methods to exchange pieces throughout the game
+ * @author LINGGSB19
+ *
+ */
+public class LetterBag {
 		private ArrayList<Character> scrabbleLetters;
 		private int max, min;
+		private HashMap<Character, Integer> ltrWorth;
 		
 		/**
-		 * constructs an array list of characters to be used in the game of scrabble
+		 * constructs an array list of characters to be used in the game of scrabble , 
+		 * sets HashMap of Character Values as Key and Integer representing the key's Value
 		 */
 		public LetterBag() {	//Adds letters available  at the beginning of the Game 			
 			this.scrabbleLetters = new ArrayList<Character>();
 			
 			this.max = 99;			//sets the max number of indexes to 99
 			this.min = 0;			//sets the minimum number of indexes to 0
-			
-			for(int i=0; i<2; i++) {
+									
+			for(int i=0; i<2; i++) {			//Adds Characters to Array
 				this.scrabbleLetters.add('B');
 				this.scrabbleLetters.add('C');
 				this.scrabbleLetters.add('F');
@@ -70,6 +75,14 @@ public class LetterBag {
 				this.scrabbleLetters.add('A');
 				this.scrabbleLetters.add('I');
 				this.scrabbleLetters.add('E');
+			}
+			
+			char[] ltrsForVal = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+			int[] valsForLtrs = {1,3,3,2,1,4,2,4,1,8,5,1,3,1,1,3,10,1,1,1,1,4,4,8,4,10};
+			
+			this.ltrWorth = new HashMap<>();		//Create a HashMap that Maps Each Letter to its worth
+			for(int i=0; i<26; i++) {
+				ltrWorth.put(ltrsForVal[i], valsForLtrs[i]);
 			}
 		}
 		/**
@@ -121,5 +134,16 @@ public class LetterBag {
 			}
 			return lettersToReplace;
 		}
+		
+		/**
+		 * Gets the character's value
+		 * @param c, is the key character
+		 * @return an integer representing the letter's value
+		 */
+		public int getLetterWorth(char c) {
+			
+			return this.ltrWorth.get(c);
+		}
 
+		
 }

@@ -1,5 +1,12 @@
-package MyScrabbleVersion;
+package project5_Scrabble;
 
+
+/**
+ * This Class creates a hand of letter choices for the player and initializes
+ * the players score to 0
+ * @author LINGGSB19
+ *
+ */
 public class ScrabblePlayer extends Player{
 	private PlayerScore score;
 	private PlayerHand hand;

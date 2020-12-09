@@ -1,5 +1,12 @@
 package project5_Scrabble;
 
+/**
+ * This Class will create a hand of letters 
+ * for a player and make changes when specific methods are called
+ * @author LINGGSB19
+ *
+ */
+
 public class PlayerHand {
 
 	private char[] hand;

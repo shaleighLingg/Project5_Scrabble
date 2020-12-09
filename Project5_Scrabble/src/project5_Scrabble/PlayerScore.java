@@ -1,5 +1,9 @@
 package project5_Scrabble;
-
+/**
+ * This Class will calculate a new player score
+ * @author LINGGSB19
+ *
+ */
 public class PlayerScore {
 
 	private int score;
